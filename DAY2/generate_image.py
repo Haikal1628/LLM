@@ -10,7 +10,7 @@ client = OpenAI(
     api_key=os.getenv('OPENAI_API_KEY')
 )
 
-prompt = 'pantai bali'# -> improve prompt
+prompt = 'gambar garuda'# -> improve prompt
 
 # client.images.generate
 response = client.images.generate(
@@ -32,11 +32,13 @@ response = client.images.generate(
 #   output_format="png",
 #   moderation="auto",
 # )
+
 # melihat URL
 image_url = response.data[0].url
 print(f'URL: {image_url}')
 
 image_data = requests.get(image_url).content
-file_name = f'gambar_{datetime.now()}.png'
+timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+file_name = f'gambar_{timestamp}.png'
 with open(file_name, 'wb') as f:
     f.write(image_data)
