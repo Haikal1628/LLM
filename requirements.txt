@@ -11,3 +11,5 @@ chromadb
 PyPDF2
 trafilatura
 ddgs
+langchain
+langchain-openai
