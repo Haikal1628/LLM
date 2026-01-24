@@ -3,9 +3,11 @@ python-dotenv
 requests
 sounddevice
 scipy
-playsound
+playsound==1.2.2
 pathlib
 pygame
 numpy
 chromadb
 PyPDF2
+trafilatura
+ddgs
